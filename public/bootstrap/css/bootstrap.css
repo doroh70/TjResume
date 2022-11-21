@@ -8286,7 +8286,7 @@ textarea.form-control-lg {
   pointer-events: auto !important;
 }
 
-.rounded {
+.-circle {
   border-radius: var(--bs-border-radius) !important;
 }
 
@@ -8315,7 +8315,7 @@ textarea.form-control-lg {
 }
 
 .rounded-circle {
-  border-radius: 50% !important;
+  border-radius: 80% !important;
 }
 
 .rounded-pill {

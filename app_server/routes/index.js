@@ -1,9 +1,30 @@
 var express = require('express');
 var router = express.Router();
 var ctrlMain = require('../controllers/main');
+var ctrlHome = require('../controllers/index');
+var ctrlResume = require('../controllers/resume');
+var ctrlProjects = require('../controllers/projects');
+var ctrlContact = require('../controllers/contact');
 
 /* GET home page. */
-router.get('/', ctrlMain.index);
+router.get('/', ctrlHome.index);
+
+/* GET resume page. */
+router.get('/resume', ctrlResume.resume);
+
+/* GET projects page. */
+router.get('/projects', ctrlProjects.projects);
+
+/* GET projects details page. */
+router.get('/projects/details', ctrlProjects.details);
+
+/* GET new project page. */
+router.get('/projects/details/new', ctrlProjects.new);
+
+/* GET contact page. */
+router.get('/contact', ctrlContact.contact);
+
+
 
 module.exports = router;
 
