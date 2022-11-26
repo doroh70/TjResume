@@ -57,3 +57,56 @@ main {
 .scrollarea {
   overflow-y: auto;
 }
+
+
+@media screen and (min-width: 700px) {
+  .sidebarr {
+    width: 260px;
+  }
+
+  .headerr {
+    display: none
+  }
+
+  .dividerrtop {
+    display: none;
+  }
+
+  .dividerr {
+    width: 10px;
+  }
+
+}
+
+
+
+/* On screens that are less than 700px wide, make the sidebar and divider smaller */
+@media screen and (max-width: 700px) and (min-width: 420px) {
+  .sidebarr {
+    width: 140px;
+  }
+  .dividerr {
+    width: 5px;
+  }
+  .headerr {
+    display: none
+  }
+  .dividerrtop {
+    display: none;
+  }
+  
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 420px) {
+  .sidebarr {
+    display: none
+  }
+  .dividerr {
+    width: 1px;
+  }
+  .dividerrtop {
+    height: .5rem;
+  }
+  
+}

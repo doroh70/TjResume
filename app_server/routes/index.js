@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var ctrlMain = require('../controllers/main');
 var ctrlHome = require('../controllers/index');
 var ctrlResume = require('../controllers/resume');
 var ctrlProjects = require('../controllers/projects');
 var ctrlContact = require('../controllers/contact');
+var ctrlInterests = require('../controllers/interests');
 
 /* GET home page. */
 router.get('/', ctrlHome.index);
@@ -23,6 +23,9 @@ router.get('/projects/details/new', ctrlProjects.new);
 
 /* GET contact page. */
 router.get('/contact', ctrlContact.contact);
+
+/* GEt interests page. */
+router.get('/interests', ctrlInterests.interests);
 
 
 
