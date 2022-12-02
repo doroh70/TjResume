@@ -5,7 +5,7 @@ var ctrlResume = require('../controllers/resume');
 var ctrlProjects = require('../controllers/projects');
 var ctrlContact = require('../controllers/contact');
 var ctrlInterests = require('../controllers/interests');
-var ctrlSignin = require('../controllers/signin');
+var ctrlSignin = require('../controllers/signIn');
 
 /* GET home page. */
 router.get('/', ctrlHome.index);
