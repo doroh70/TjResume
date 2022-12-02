@@ -7,11 +7,11 @@
 </section>
 
 <div class="col-md-9 col-lg-10 container">
-    <form class="needs-validation" novalidate="" method="post">
+    <form class="needs-validation" method="post">
         <div class="row g-3">
             <div class="col-sm-6">
                 <label for="firstName" class="form-label">First name</label>
-                <input type="text" class="form-control" name="firstName" id="firstName" placeholder="" value="" required="">
+                <input type="text" class="form-control" name="firstName" id="firstName" placeholder="" value="" required="required">
                 <div class="invalid-feedback">
                     Valid first name is required.
                 </div>
@@ -19,7 +19,7 @@
 
             <div class="col-sm-6">
                 <label for="lastName" class="form-label">Last name</label>
-                <input type="text" class="form-control" name="lastName" id="lastName" placeholder="" value="" required="">
+                <input type="text" class="form-control" name="lastName" id="lastName" placeholder="" value="" required="required">
                 <div class="invalid-feedback">
                     Valid last name is required.
                 </div>
@@ -29,7 +29,7 @@
                 <label for="email" class="form-label">Email</label>
                 <div class="input-group has-validation">
                     <span class="input-group-text">@</span>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="you@example.com" required="">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="you@example.com" required="required">
                     <div class="invalid-feedback">
                         Please enter a valid email address
                     </div>
@@ -42,7 +42,7 @@
                 <label for="message" class="form-label">Enter your message here :)</label>
                 <div class="input-group has-validation">
                     <textarea name="message" cols="40" rows="5" id="message" class="form-control"
-                        placeholder="Enter message here" required=""></textarea>
+                        placeholder="Enter message here" required="required"></textarea>
                     <div class="invalid-feedback">
                         Please enter a message
                     </div>

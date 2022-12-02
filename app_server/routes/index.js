@@ -26,7 +26,7 @@ router.get('/projects/details/new', ctrlProjects.new);
 router.get('/contact', ctrlContact.contact);
 
 /* GET contact page. */
-router.post('/contact', ctrlContact.post);
+//router.post('/contact', ctrlContact.post);
 
 /* GET interests page. */
 router.get('/interests', ctrlInterests.interests);
