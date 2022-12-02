@@ -5,6 +5,7 @@ var ctrlResume = require('../controllers/resume');
 var ctrlProjects = require('../controllers/projects');
 var ctrlContact = require('../controllers/contact');
 var ctrlInterests = require('../controllers/interests');
+var ctrlSignin = require('../controllers/signin');
 
 /* GET home page. */
 router.get('/', ctrlHome.index);
@@ -24,8 +25,14 @@ router.get('/projects/details/new', ctrlProjects.new);
 /* GET contact page. */
 router.get('/contact', ctrlContact.contact);
 
-/* GEt interests page. */
+/* GET contact page. */
+router.post('/contact', ctrlContact.post);
+
+/* GET interests page. */
 router.get('/interests', ctrlInterests.interests);
+
+/*GET sign-in page */
+router.get('/sign-in', ctrlSignin.signIn);
 
 
 

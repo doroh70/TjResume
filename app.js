@@ -4,13 +4,26 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const mongoose = require('mongoose');
+
 
 var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
 
 var app = express();
 
+// db conn using .env file in development mode
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
 
+mongoose.connect(process.env.DATABASE_URL)
+.then((res) => {
+    console.log('Connected to MongoDB')
+  }
+).catch(() => {
+  console.log('Cannot connect to MongoDB')
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));

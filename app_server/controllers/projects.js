@@ -1,7 +1,11 @@
+const Repos = require('../githubAPI');
+
 /*Get Projects List Page*/
 
 module.exports.projects = function(req, res){
-    res.render('projects', {title: 'Projects'});
+    //call githubapi here, it will return json object.
+    
+    res.render('projects', {title: 'Projects', repos: Repos});
 };
 
 /*Get Projects Details Page*/
