@@ -13,7 +13,7 @@ var usersRouter = require('./app_server/routes/users');
 var app = express();
 
 // db conn using .env file in development mode
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV == 'production') {
   require('dotenv').config()
 }
 
