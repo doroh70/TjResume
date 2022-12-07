@@ -8,12 +8,13 @@ const mongoose = require('mongoose');
 
 
 var indexRouter = require('./app_server/routes/index');
+var routesApi = require('./app_api/routes/index');
 var usersRouter = require('./app_server/routes/users');
 
 var app = express();
 
 // db conn using .env file in development mode
-if (process.env.NODE_ENV == 'production') {
+if (process.env.NODE_ENV != 'production') {
   require('dotenv').config()
 }
 console.log(process.env.NODE_ENV);
@@ -41,6 +42,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+//app.use('/api', routesApi);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

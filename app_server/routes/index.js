@@ -6,6 +6,7 @@ var ctrlProjects = require('../controllers/projects');
 var ctrlContact = require('../controllers/contact');
 var ctrlInterests = require('../controllers/interests');
 var ctrlSignin = require('../controllers/signIn');
+var ctrlTranscript = require('../controllers/transcript');
 
 /* GET home page. */
 router.get('/', ctrlHome.index);
@@ -15,6 +16,9 @@ router.get('/resume', ctrlResume.resume);
 
 /* GET projects page. */
 router.get('/projects', ctrlProjects.projects);
+
+/* GET transcript page. */
+router.get('/transcript', ctrlTranscript.transcript);
 
 /* GET projects details page. */
 router.get('/projects/details', ctrlProjects.details);
